@@ -1,4 +1,8 @@
 import { useState } from 'react';
+
+// this is the useNavigate hook from react-router-dom, which allows 
+// us to programmatically navigate to a different route 
+// (this is automatic message)
 import { useNavigate } from 'react-router-dom';
 
 function Signup({ addStudent }) {
@@ -46,6 +50,7 @@ function Signup({ addStudent }) {
 
         if (validate()) {
             addStudent({ name, username, password, email });
+            //this navigates to the success page after successful validation and adding the student.
             navigate("/success");
         } else {
             setname("");
